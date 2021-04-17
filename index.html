@@ -8,15 +8,21 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <a href="http://jquery.com">jQuery</a>
-  <script src="jquery-3.6.0.min.js"></script>
-  <script>
-    $(document).ready(function() {
-      $("a").click(function(event) {
-        alert("The link will no longer take you to jquery.com");
-        event.preventDefault();
-      })
-    })
-  </script>
+  <h1>Bar Chart Project</h1>
+  <div class="chart">
+    <h2>Bar Chart using HTML, CSS and jQuery</h2>
+
+    <div class="grid">
+      <div class="bar" style="--bar-value:85%"></div>
+      <div class="bar" style="--bar-value:35%"></div>
+      <div class="bar" style="--bar-value:60%"></div>
+      <div class="bar" style="--bar-value:20%"></div>
+      <div class="bar" style="--bar-value:15%"></div>
+      <div class="bar" style="--bar-value:5%"></div>
+    </div>
+  </div>
+  
 </body>
+<script src="jquery-3.6.0.min.js"></script>
+<script src="script.js"></script>
 </html>

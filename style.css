@@ -1,0 +1,11 @@
+.grid {
+  transform: translate(0px, 50px);
+}
+
+.bar {
+  width: var(--bar-value);
+  height: 50px;
+  margin: 30px 0;    
+  background-color: #F16335;
+  border-radius: 0 3px 3px 0;
+}
