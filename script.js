@@ -1,6 +1,8 @@
-$(document).ready(function () {
-  $("a").click(function (event) {
-    event.preventDefault();
-    $(this).hide("slow");
-  });
+$(function () {
+  $(".bars li .bar").each(function (key, bar) {
+    var percentage = $(this).data("percentage");
+    $(this).animate({
+      width: percentage + "%",
+    });
+  }, 1000);
 });

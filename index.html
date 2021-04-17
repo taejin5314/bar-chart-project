@@ -8,18 +8,22 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Bar Chart Project</h1>
+  <h1 class="title">Bar Chart Project</h1>
   <div class="chart">
-    <h2>Bar Chart using HTML, CSS and jQuery</h2>
 
-    <div class="grid">
-      <div class="bar" style="--bar-value:85%"></div>
-      <div class="bar" style="--bar-value:35%"></div>
-      <div class="bar" style="--bar-value:60%"></div>
-      <div class="bar" style="--bar-value:20%"></div>
-      <div class="bar" style="--bar-value:15%"></div>
-      <div class="bar" style="--bar-value:5%"></div>
-    </div>
+    <ul class="numbers">
+      <li><span>0%</span></li>
+      <li><span>50%</span></li>
+      <li><span>100%</span></li>
+    </ul>
+
+    <ul class="bars">
+      <li><span>Option 1</span><div class="bar" data-percentage="50"></div></li>
+      <li><span>Option 2</span><div class="bar" data-percentage="30"></div></li>
+      <li><span>Option 3</span><div class="bar" data-percentage="60"></div></li>
+      <li><span>Option 4</span><div class="bar" data-percentage="100"></div></li>
+      <li><span>Option 5</span><div class="bar" data-percentage="80"></div></li>
+    </ul>
   </div>
   
 </body>
