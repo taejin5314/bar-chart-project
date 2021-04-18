@@ -15,8 +15,8 @@ body {
 }
 
 .chart {
-  width: 600px;
-  height: 400px;
+  /* width: 600px; */
+  /* height: 400px; */
   display: block;
   position: relative;
 }
@@ -25,7 +25,7 @@ body {
   color: white;
   margin: 0;
   padding: 0;
-  width: 600px;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   position: absolute;
@@ -43,7 +43,7 @@ body {
   background: #555;
   margin: 0;
   padding: 0;
-  width: 600px;
+  width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -84,5 +84,4 @@ body {
   content: attr(data-percentage) '%';
   position: relative;
   left: calc(100% + 10px);
-  top: 25%;
 }

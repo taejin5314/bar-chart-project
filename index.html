@@ -32,10 +32,15 @@
 <script src="script.js"></script>
 <script>
   const drawBarChart = function (data, options, element) {
-    for (let i = 0 ; i< data.length; i++) {
+    for (let i = 0; i < Object.keys(options).length; i++) {
+      const key = Object.keys(options)[i];
+      if (key === 'height') $('.chart').css('height', options[key])
+      else if (key === 'width') $('.chart').css('width', options[key]);
+    }
+    for (i = 0; i < data.length; i++) {
       $('.bars').append(`<li><span>${data[i]}</span><div class="bar" data-percentage="${Math.round(Math.random() * 100)}"></div></li>`)
     }
   }
-  drawBarChart([1, 2, 3, 4, 5,6, 7, 8, 9, 10, 11, 12, 13, 14,15, 16,17,18,19,20], { height: '300px', width: '600px'} ,0);
+  drawBarChart([1, 2, 3, 4, 5,6, 7, 8, 9, 10, 11, 12, 13, 14,15, 16,17,18,19,20], { height: '500px', width: '1000px'} ,0);
 </script>
 </html>
