@@ -56,14 +56,11 @@ body {
   list-style: none;
   align-items: center;
   position: relative;
-  height: 100%;
-  margin: 20px 0;
 }
 
 .bars li span {
   position: absolute;
-  left: -60px;
-  margin-top: 10px;
+  /* left: -5%; */
   text-align: center;
 }
 
