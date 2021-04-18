@@ -18,11 +18,11 @@
     </ul>
 
     <ul class="bars">
-      <li><span>Option 1</span><div class="bar" data-percentage="50"></div></li>
+      <!-- <li><span>Option 1</span><div class="bar" data-percentage="50"></div></li>
       <li><span>Option 2</span><div class="bar" data-percentage="30"></div></li>
       <li><span>Option 3</span><div class="bar" data-percentage="60"></div></li>
       <li><span>Option 4</span><div class="bar" data-percentage="100"></div></li>
-      <li><span>Option 5</span><div class="bar" data-percentage="80"></div></li>
+      <li><span>Option 5</span><div class="bar" data-percentage="80"></div></li> -->
     </ul>
     
   </div>
@@ -32,10 +32,10 @@
 <script src="script.js"></script>
 <script>
   const drawBarChart = function (data, options, element) {
-    // for (let i = 0 ; i< data.length; i++) {
-      $('.bars').append('<li><span>Option 6</span><div class="bar" data-percentage="80"></div></li>')
-    // }
+    for (let i = 0 ; i< data.length; i++) {
+      $('.bars').append(`<li><span>${data[i]}</span><div class="bar" data-percentage="${data[i]* 20}"></div></li>`)
+    }
   }
-  drawBarChart(0, 0 ,0);
+  drawBarChart([1, 2, 3, 4, 5], 0 ,0);
 </script>
 </html>
