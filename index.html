@@ -24,9 +24,18 @@
       <li><span>Option 4</span><div class="bar" data-percentage="100"></div></li>
       <li><span>Option 5</span><div class="bar" data-percentage="80"></div></li>
     </ul>
+    
   </div>
   
 </body>
 <script src="jquery-3.6.0.min.js"></script>
 <script src="script.js"></script>
+<script>
+  const drawBarChart = function (data, options, element) {
+    // for (let i = 0 ; i< data.length; i++) {
+      $('.bars').append('<li><span>Option 6</span><div class="bar" data-percentage="80"></div></li>')
+    // }
+  }
+  drawBarChart(0, 0 ,0);
+</script>
 </html>
