@@ -17,13 +17,7 @@
       <li><span>100%</span></li>
     </ul>
 
-    <ul class="bars">
-      <!-- <li><span>Option 1</span><div class="bar" data-percentage="50"></div></li>
-      <li><span>Option 2</span><div class="bar" data-percentage="30"></div></li>
-      <li><span>Option 3</span><div class="bar" data-percentage="60"></div></li>
-      <li><span>Option 4</span><div class="bar" data-percentage="100"></div></li>
-      <li><span>Option 5</span><div class="bar" data-percentage="80"></div></li> -->
-    </ul>
+    <ul class="bars"></ul>
     
   </div>
   
@@ -34,13 +28,19 @@
   const drawBarChart = function (data, options, element) {
     for (let i = 0; i < Object.keys(options).length; i++) {
       const key = Object.keys(options)[i];
-      if (key === 'height') $('.chart').css('height', options[key])
-      else if (key === 'width') $('.chart').css('width', options[key]);
+      // set the chart options - e.g) width and height of the chart.
+      $('.chart').css(key, options[key])
     }
+    
     for (i = 0; i < data.length; i++) {
+      // add bars one by one using for loop.
       $('.bars').append(`<li><span>${data[i]}</span><div class="bar" data-percentage="${Math.round(Math.random() * 100)}"></div></li>`)
     }
+
+    const chartHeight = $('.chart').css('height');
+    // set the height of each bar
+    $('.bar').css('height', `calc(${chartHeight} / ${data.length} * 0.7)`);
   }
-  drawBarChart([1, 2, 3, 4, 5,6, 7, 8, 9, 10, 11, 12, 13, 14,15, 16,17,18,19,20], { height: '500px', width: '1000px'} ,0);
+  drawBarChart([1, 2, 3, 4, 5,6, 7, 8, 9, 10, 11, 12, 13, 14,15, 16,17,18,19,20], { height: '800px', width: '1000px' } ,0);
 </script>
 </html>
